@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+// import { Routes, Route } from 'react-router-dom'
 import axios from 'axios'
 // components
 import Nav from './components/Nav'
@@ -14,6 +14,8 @@ function App() {
 
   const [user, setUser] = useState('')
   const [supersList, setSupersList] = useState([])
+  const [heros, setHeros] = useState([])
+  const [villains, setVillains] = useState([])
 
   useEffect(() => {
     fetchSupers()
@@ -23,6 +25,13 @@ function App() {
     try {
       const response = await axios.get("https://akabab.github.io/superhero-api/api/all.json")
       setSupersList(response.data)
+      
+      const good = response.data.filter(superHero => superHero.biography.alignment === 'good')
+      setHeros(good)
+
+      const bad = response.data.filter(superVillain => superVillain.biography.alignment === 'bad')
+      setVillains(bad)
+    
     } catch (error) {
       console.log(error)
     }
@@ -33,7 +42,9 @@ function App() {
   return (
     <div className="App">
       {/* <UserContext.Provider value={user}> */}
-
+    {console.log('heros', heros)}
+    {console.log('villains', villains)}
+  
         <Nav />
 
         {/* <Routes>
