@@ -1,0 +1,13 @@
+#hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin: 1rem;
+    width: 80%;
+    
+}
+
+.card {
+    width: 10rem;
+}

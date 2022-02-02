@@ -7,6 +7,7 @@ import Nav from './components/Nav'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import HeroList from './pages/HeroList'
+import VillainList from './pages/VillainList'
 // contexts
 import UserContext from './contexts/UserContext'
 
@@ -14,8 +15,8 @@ function App() {
 
   const [user, setUser] = useState('')
   const [supersList, setSupersList] = useState([])
-  const [heros, setHeros] = useState([])
-  const [villains, setVillains] = useState([])
+  const [allHeros, setAllHeros] = useState([])
+  const [allVillains, setAllVillains] = useState([])
 
   useEffect(() => {
     fetchSupers()
@@ -27,17 +28,19 @@ function App() {
       setSupersList(response.data)
       
       const good = response.data.filter(superHero => superHero.biography.alignment === 'good')
-      setHeros(good)
+      setAllHeros(good)
 
       const bad = response.data.filter(superVillain => superVillain.biography.alignment === 'bad')
-      setVillains(bad)
+      setAllVillains(bad)
     
     } catch (error) {
       console.log(error)
     }
   }
 
-  console.log(supersList)
+  // console.log(supersList)
+  // console.log('good', allHeros)
+  // console.log('bad', allVillains)
 
   return (
     <div className="App">
@@ -47,8 +50,19 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='login' element={<Login />} />
-          <Route path='hero/list' element={<HeroList />} />
+          <Route path='login' element={<Login setUser={setUser} />} />
+          <Route path='hero/list' element={
+            <HeroList 
+              allHeros={allHeros}
+              itemsPerPage={12}
+            />
+          } />
+          <Route path='villain/list' element={
+            <VillainList 
+              allVillains={allVillains}
+              itemsPerPage={12}
+            />
+          } />
         </Routes>
 
       </UserContext.Provider>
