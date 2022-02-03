@@ -22,6 +22,7 @@ const Nav = () => {
         !user
         ?
         <div className='nav-fix'>
+          
           <li className="nav-item">
             <Link className="nav-link" to="login">Login</Link>
           </li>
