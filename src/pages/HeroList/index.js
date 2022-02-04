@@ -12,8 +12,7 @@ const HeroList = ({allHeros}) => {
     const [currHeros, setCurrHeros] = useState([])
 
     useEffect(() => {
-        const fetchData = async () => {
-            
+        const fetchData = async () => { 
             setPageCount(Math.ceil(allHeros.length/perPage))
             setCurrHeros(allHeros.slice(offset, offset + perPage))
         } 
@@ -29,12 +28,14 @@ const HeroList = ({allHeros}) => {
         return (
             
             <div id="hero-container">
-
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                <select className="form-select" aria-label="Default select example">
+                    <div>
+                        <p>Please choose a category</p>
+                    </div>
+                    <option selected>All</option>
+                    <option value="1">Category One: break-in/robbery</option>
+                    <option value="2">Category Two: heist/rescue</option>
+                    <option value="3">Category Three: natural disaster/super villain terrorist/world-ending</option>
                 </select>
 
                 {
@@ -51,7 +52,13 @@ const HeroList = ({allHeros}) => {
             </div>
         )
     }
-    console.log(allHeros)
+
+
+    const thisOne = allHeros.filter(specify => specify.name === 'Dash')
+    console.log(thisOne)
+    // console.log(allHeros)
+
+
     return (
         <div>
 

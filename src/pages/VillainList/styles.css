@@ -9,6 +9,9 @@
     margin-bottom: 5%;
     margin-left: 5%;
     margin-right: 5%;
+    /* background-color: rgb(0, 0, 0); */
+    /* width: 100vw; */
+    /* height: 100vh; */
 }
 
 /* cards */
@@ -17,7 +20,6 @@
     padding: .5%;
     border: none;
     position: relative;
-    width: 8rem;
     background: linear-gradient(75deg, red, yellow);
     z-index: 1;
 }
