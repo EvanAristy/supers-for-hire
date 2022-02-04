@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios'
 import ReactPaginate from 'react-paginate'
+// components
+import Category from '../../components/Category';
 // css
 import "./styles.css"
 
@@ -28,15 +30,7 @@ const HeroList = ({allHeros}) => {
         return (
             
             <div id="hero-container">
-                <select className="form-select" aria-label="Default select example">
-                    <div>
-                        <p>Please choose a category</p>
-                    </div>
-                    <option selected>All</option>
-                    <option value="1">Category One: break-in/robbery</option>
-                    <option value="2">Category Two: heist/rescue</option>
-                    <option value="3">Category Three: natural disaster/super villain terrorist/world-ending</option>
-                </select>
+                <Category allHeros={allHeros}/>
 
                 {
                     currHeros.map(hero => (
@@ -54,9 +48,9 @@ const HeroList = ({allHeros}) => {
     }
 
 
-    const thisOne = allHeros.filter(specify => specify.name === 'Dash')
+    const thisOne = allHeros.filter(specify => specify.name === 'A-Bomb')
     console.log(thisOne)
-    // console.log(allHeros)
+    console.log(allHeros)
 
 
     return (

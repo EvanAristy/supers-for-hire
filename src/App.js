@@ -62,6 +62,7 @@ function App() {
           <Route path='villain/list' element={
             <VillainList 
               allVillains={allVillains}
+              itemsPerPage={12}
             />
           } />
         </Routes>
