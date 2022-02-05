@@ -50,7 +50,7 @@ const HeroList = ({allHeros}) => {
 
     const thisOne = allHeros.filter(specify => specify.name === 'A-Bomb')
     console.log(thisOne)
-    console.log(allHeros)
+    // console.log(allHeros)
 
 
     return (
