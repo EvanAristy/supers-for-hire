@@ -28,12 +28,12 @@ function App() {
       setSupersList(response.data)
       
       const good = response.data.filter(superHero => superHero.biography.alignment === 'good')
-      // const goodShuffle = good.sort(() => Math.random() - 0.5)
-      setAllHeros(good)
+      const goodShuffle = good.sort(() => Math.random() - 0.5)
+      setAllHeros(goodShuffle)
 
       const bad = response.data.filter(superVillain => superVillain.biography.alignment === 'bad')
-      // const badShuffle = bad.sort(() => Math.random() - 0.5)
-      setAllVillains(bad)
+      const badShuffle = bad.sort(() => Math.random() - 0.5)
+      setAllVillains(badShuffle)
     
     } catch (error) {
       console.log(error)
