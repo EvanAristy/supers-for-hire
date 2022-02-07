@@ -1,71 +1,19 @@
-# Getting Started with Create React App
+https://app.netlify.com/sites/thirsty-booth-eb0d81/overview
+<a href="https://app.netlify.com/sites/thirsty-booth-eb0d81/overview"> Netlify Link </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+----- SUPERS FOR HIRE -----
 
-## Available Scripts
+----- PURPOSE -----
 
-In the project directory, you can run:
+--- The idea of Supers For Hire was to have a company that would reach out to different superheros and super villains based on the clients needs. Having a large network of supers makes it easier for the client to come to us for a specific hero.  
 
-### `npm start`
+----- TECHNOLOGIES -----
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+--- Used React App for the project. 
+--- Used Bootstrap for the navbar, card components and login form.
+--- Used React Beautiful DnD for the drag and drop features.
+--- Used a button generator for some of the buttons.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+----- PROBLEMS -----
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# supers-for-hire
+--- I had major issues with the form select and would like to continue working with it to get it working. I ended up just using multiple buttons to filter through the arrays and render different categories. The drag and drop feature is a little buggy but it works for the most part. I just couldn't figure out how to remove the card from the list after it was dropped into another area. I would also like to continue working with DnD so that i can utilize it in the future.
