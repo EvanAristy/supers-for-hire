@@ -1,4 +1,4 @@
-#hero-container {
+.hero-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -7,22 +7,50 @@
     justify-content: center;
     /* padding-top: 10%; */
     margin-bottom: 5%;
-    margin-left: 5%;
+    /* margin-left: 5%; */
     margin-right: 5%;
+    /* width: 70%; */
 }
 
-.categories{
-  width: 100%;
+#container{
+  width: 100vw;
 }
+
+
+.main{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.left{
+  width: 80%;
+}
+
+.right{
+  margin: .5rem;
+  display: flex;
+  width: 20%;
+  /* background-color: grey; */
+  border: 1px solid lightgrey;
+  border-radius: 3%;
+}
+
+.shop-container{
+  margin: 1rem;
+}
+
+
+
 
 /* Cards */
 
 .h-card{
-    width: 8rem;
+    width: 9rem;
     padding: .5%;
     border: none;
     position: relative;
-    width: 8rem;
     background: linear-gradient(75deg, #6d78ff, #00ffb8);
     z-index: 1;
 }
@@ -40,11 +68,18 @@
   }
 
 
-  /* form-select */
-  .form-select{
-    margin: 5%;
+  /* buttons */
+
+  .button{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
   }
 
+.b-confirm{
+  margin-top: 2rem;
+}
 
   /* pagination */
   .h-page{
