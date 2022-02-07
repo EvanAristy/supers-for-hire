@@ -1,22 +1,18 @@
-#villain-container {
+.villain-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
     margin: 1rem;
     justify-content: center;
-    padding-top: 10%;
     margin-bottom: 5%;
-    margin-left: 5%;
     margin-right: 5%;
     /* background-color: rgb(0, 0, 0); */
-    /* width: 100vw; */
-    /* height: 100vh; */
 }
 
 /* cards */
 .v-card {
-    width: 8rem;
+    width: 9rem;
     padding: .5%;
     border: none;
     position: relative;
@@ -39,6 +35,33 @@
   .card-body{
     padding: none;
     /* padding-top: 1rem; */
+  }
+
+  /* buttons */
+  .v-confirm{
+    margin-top: 10rem;
+    border-radius: 10px;
+    background-color: orange;
+    border: none;
+  }
+
+  .v-cat{
+    box-shadow: 2px 1px 5px -2px rgb(255, 124, 1);
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid rgb(226, 226, 226);
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    font-family: Arial;
+    font-size: 16px;
+    padding: 3px 3px;
+    text-decoration: none;
+  }
+
+  .vcat-button:active {
+    position: relative;
+    top: 1px;
   }
 
 

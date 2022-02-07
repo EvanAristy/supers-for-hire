@@ -31,6 +31,7 @@ const HeroList = ({ allHeros }) => {
   };
 
   const Heros = () => {
+
     const unFilter = () => {
       setFilter(allHeros);
     };
@@ -61,13 +62,13 @@ const HeroList = ({ allHeros }) => {
     }
 
     return (
-      <div id="container">
+      <div className="container">
 
             <div className="button">
-                <button onClick={() => unFilter()}>All Heros</button>
-                <button onClick={() => filterWeak()}>Category A</button>
-                <button onClick={() => filterStrong()}>Category B</button>
-                <button onClick={() => filterSuper()}>Category C</button>
+                <button className="h-all hcat-button" onClick={() => unFilter()}>All Heros</button>
+                <button className="h-weak hcat-button" onClick={() => filterWeak()}>Category A</button>
+                <button className="h-strong hcat-button" onClick={() => filterStrong()}>Category B</button>
+                <button className="h-super hcat-button" onClick={() => filterSuper()}>Category C</button>
             </div>
         
             <div className="main">
@@ -116,7 +117,7 @@ const HeroList = ({ allHeros }) => {
                                             // </Draggable>
                                         )
                                     })}
-                                    <button className="b-confirm">Corfirm</button>
+                                    <button className="h-confirm every-button">Corfirm</button>
                                 </div>
                             )}
                         </Droppable>
