@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
+import { useNavigate } from "react-router-dom";
 // css
 import "./styles.css";
 
@@ -13,6 +14,7 @@ const VillainList = ({ allVillains }) => {
   const [currVillains, setCurrVillains] = useState([]);
   const [filter, setFilter] = useState(allVillains);
   const [characters, setCharacters] = useState([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,29 +59,17 @@ const VillainList = ({ allVillains }) => {
         console.log(characters)
     }
 
-
-
-                <div id="villain-container">
-                    <button onClick={() => unFilter()}>All Heros</button>
-                    <button onClick={() => filterWeak()}>Category A</button>
-                    <button onClick={() => filterStrong()}>Category B</button>
-                    <button onClick={() => filterSuper()}>Category C</button>
-                </div>
-
-                {currVillains.map((villain) => (
-                <div className="card v-card" key={villain.id}>
-                    <img src={villain.images.sm} className="card-img-top" alt="villain-pic"/>
-                    <div className="card-description">
-                    <h6 className="card-title">{villain.name}</h6>
-                    </div>
-                </div>
-                ))}
-            
-
+    function handleConfirm() {
+        if( alert('They have been notified and will be there shortly. Happy we could be of service.')){}
+        else  navigate('/');
+     }
 
     return (
         <div className="container">
 
+            <div className="instructions">
+                <h6>Please choose a category that best suits your needs. Category A for small jobs. Category B for dealing with a hero. Category C for total world domination</h6>
+            </div>
             <div className="button">
                 <button className="v-cat" onClick={() => unFilter()}>All Heros</button>
                 <button className="v-cat" onClick={() => filterWeak()}>Category A</button>
@@ -127,7 +117,7 @@ const VillainList = ({ allVillains }) => {
                                             </div>
                                         )
                                     })}
-                                    <button className="v-confirm">Corfirm</button>
+                                    <button className="v-confirm" onClick={handleConfirm}>Corfirm</button>
                                 </div>
                             )}
                         </Droppable>

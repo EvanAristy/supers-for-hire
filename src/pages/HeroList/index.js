@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
+import { useNavigate } from "react-router-dom";
 // components
 // import Category from '../../components/Category';
 // css
@@ -15,6 +16,7 @@ const HeroList = ({ allHeros }) => {
   const [currHeros, setCurrHeros] = useState([]);
   const [filter, setFilter] = useState(allHeros);
   const [characters, setCharacters] = useState([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -61,9 +63,16 @@ const HeroList = ({ allHeros }) => {
         console.log(characters)
     }
 
+    function handleConfirm() {
+       if( alert('Help is on the way. We are Happy to be of service')){}
+       else  navigate('/');
+    }
+
     return (
       <div className="container">
-
+            <div className="instructions">
+                <h6>Please choose a category based on your needs. Category A for minor threats. Category B for dangerouse tasks. Category C for world-ending threats</h6>
+            </div>
             <div className="button">
                 <button className="h-all hcat-button" onClick={() => unFilter()}>All Heros</button>
                 <button className="h-weak hcat-button" onClick={() => filterWeak()}>Category A</button>
@@ -117,7 +126,7 @@ const HeroList = ({ allHeros }) => {
                                             // </Draggable>
                                         )
                                     })}
-                                    <button className="h-confirm every-button">Corfirm</button>
+                                    <button className="h-confirm every-button" onClick={handleConfirm}>Corfirm</button>
                                 </div>
                             )}
                         </Droppable>

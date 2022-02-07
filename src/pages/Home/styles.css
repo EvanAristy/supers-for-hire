@@ -1,0 +1,14 @@
+#landing-page{
+    background-image: url("../../components/Images/logo.png");
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-position: center;
+    text-align: center;
+    padding: 5%;
+}
+
+#welcome{
+    font-size: 4rem;
+}

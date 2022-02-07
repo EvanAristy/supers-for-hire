@@ -15,18 +15,16 @@ const Nav = () => {
       <li className="nav-item">
         <Link className="nav-link active" aria-current="page" to="/">Home</Link>
       </li>
-      <li className="nav-item">
-            <Link className="nav-link" to="hero/list">Heros</Link>
-          </li>
       {
         !user
         ?
         <div className='nav-fix'>
-          
+          <li className="nav-item">
+            <Link className="nav-link" to="hero/list">Heros</Link>
+          </li>
           <li className="nav-item">
             <Link className="nav-link" to="login">Login</Link>
           </li>
-          
         </div>
         :
         <li className='nav-item'>
