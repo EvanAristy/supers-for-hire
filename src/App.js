@@ -10,6 +10,8 @@ import HeroList from './pages/HeroList'
 import VillainList from './pages/VillainList'
 // contexts
 import UserContext from './contexts/UserContext'
+// css
+import "./App.css"
 
 function App() {
 
@@ -40,6 +42,8 @@ function App() {
     }
   }
 
+  console.log(supersList)
+
   // console.log(supersList)
   // console.log('good', allHeros)
   // console.log('bad', allVillains)
@@ -63,6 +67,7 @@ function App() {
             <VillainList 
               allVillains={allVillains}
               itemsPerPage={12}
+              setUser={setUser}
             />
           } />
         </Routes>

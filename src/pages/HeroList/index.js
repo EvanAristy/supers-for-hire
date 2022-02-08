@@ -38,16 +38,16 @@ const HeroList = ({ allHeros }) => {
       setFilter(allHeros);
     };
     const filterWeak = () => {
-      const minor = allHeros.filter((power) => power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength < 200);
+      const minor = allHeros.filter((power) => power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength <= 300);
       setFilter(minor);
     };
     const filterStrong = () => {
-      const urgent = allHeros.filter((power) => (power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength > 200) & (power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength < 400));
+      const urgent = allHeros.filter((power) => (power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength > 300) & (power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength < 450));
       setFilter(urgent);
     };
     const filterSuper = () => {
       const priority = allHeros.filter(
-        (power) => power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength > 500);
+        (power) => power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength >= 450);
       setFilter(priority);
     };
 

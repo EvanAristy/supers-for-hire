@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 // css
 import "./styles.css";
 
-const VillainList = ({ allVillains }) => {
+const VillainList = ({ allVillains, setUser }) => {
 
   const [offset, setOffset] = useState(0);
   const [perPage] = useState(12);
@@ -35,15 +35,15 @@ const VillainList = ({ allVillains }) => {
       setFilter(allVillains);
     };
     const filterWeak = () => {
-      const minor = allVillains.filter((power) =>power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength < 200);
+      const minor = allVillains.filter((power) =>power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength < 300);
       setFilter(minor);
     };
     const filterStrong = () => {
-      const urgent = allVillains.filter((power) => (power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength > 200) & (power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength < 400));
+      const urgent = allVillains.filter((power) => (power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength >= 300) & (power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength < 450));
       setFilter(urgent);
     };
     const filterSuper = () => {
-      const priority = allVillains.filter((power) => power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength > 500);
+      const priority = allVillains.filter((power) => power.powerstats.combat + power.powerstats.durability + power.powerstats.intelligence + power.powerstats.power + power.powerstats.speed + power.powerstats.strength >= 450);
       setFilter(priority);
     };
 
@@ -62,6 +62,7 @@ const VillainList = ({ allVillains }) => {
     function handleConfirm() {
         if( alert('They have been notified and will be there shortly. Happy we could be of service.')){}
         else  navigate('/');
+        setUser('')
      }
 
     return (
